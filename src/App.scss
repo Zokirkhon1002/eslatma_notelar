@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+    padding: 50px;
+    height: 100vh;
+    background-image: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6)), url('./assets/brick-wall.jpg');
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+
+    span {
+        display: block;
+        color: darken(white, 20%);
+        font-size: 14px;
+        font-style: italic;
+        height: 14px;
+    }
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+    textarea {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid lightgray;
+        min-width: 100%;
+        max-width: 100%;
+        height: 120px;
+        padding: 10px;
+        outline: none;
+    }
+
+    button {
+        display: inline-block;
+        color: #fff;
+        width: 100%;
+        background-color: rgb(7, 221, 7);
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        font-size: 16px;
+        padding: 15px;
+        outline: none;
+        transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+        -moz-transition: 0.5s ease;
+        -ms-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+
+        span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+
+            &::after {
+                content: '\00bb';
+                font-size: 25px;
+                position: absolute;
+                opacity: 0;
+                top: -6px;
+                right: -20px;
+                transition: 0.5s;
+            }
+        }
+
+        &:hover {
+            background-color: rgb(5, 184, 5);
+            color: #fff;
+
+            span {
+                padding-right: 25px;
+
+                &::after {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.note {
+    position: absolute;
+    cursor: pointer;
+    background-image: url('./assets/post-it-note.png');
+    background-size: cover;
+    top: 100px;
+    left: 300px;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+
+    .text {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        height: 100%;
+        width: 100%;
+        white-space: pre-wrap;
+        overflow-y: scroll;
+    }
+
+    .close {
+        border-radius: 50%;
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        right: 15px;
+        transition: transform .3s ease;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        &:hover {
+            transform: scale(1.6);
+        }
+    }
+}
+
+// .note {
+// position: absolute;
+// cursor: pointer;
+// background-image: url('assets/post-it-note.png');
+// background-size: cover;
+// top: 100px;
+// left: 300px;
+// height: 200px;
+// width: 200px;
+// padding: 20px;
+
+
+// .text {
+//     font-family: Arial, Helvetica, sans-serif;
+//     height: 100%;
+//     width: 100%;
+//     white-space: pre-wrap;
+//     overflow-y: scroll;
+// }
+
+// .close {
+//     width: 15px;
+//     height: 15px;
+//     position: absolute;
+//     right: 15px;
+//     transition: transform .3s ease;
+
+//     &:hover {
+//         transform: scale(1.6);
+//     }
+//     }
+// }
