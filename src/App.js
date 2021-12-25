@@ -65,7 +65,7 @@ export function App() {
         Eslatma Notelar ({notesState.totalNotes})
         <span>
           {notesState.totalNotes > 0
-            ? `Last note created: ${notesState.lastNoteCreated}`
+            ? `Oxirgi yaratilgan: ${notesState.lastNoteCreated}`
             : ""}
         </span>
       </h1>
@@ -110,7 +110,7 @@ export function App() {
           <pre className="text">
             {note.text}
             <br/>
-            <span style={{fontSize: '12px'}}>{`created: ${note.date}`}</span>
+            <span style={{fontSize: '12px'}}>{`yaratildi: ${note.date}`}</span>
           </pre>
         </div>
       ))}
